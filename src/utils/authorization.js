@@ -1,15 +1,21 @@
 const { v4: uuid } = require("uuid");
+const authorizationServices = require("../services/authorizationService")
 
-const checkUser = (req,res,next) => {
+function checkUser (req, res, next){
+
 
     const { cookies } = req;
     const { email, password } = req.body;
 
-    if(!cookies.sessionId || !email || !password ){
+    console.log( email, password)
 
-        res.status(401).send({mensaje: "No autorizado"});
-        
-    };
+    if(!cookies.sessionId && !email && !password ){
+
+        res.status(401).send({
+            mensaje: "Petición sin datos suficientes"
+        });
+
+    }
 
     // Primera vez que usuario se loguea
     if(email && password){
@@ -19,22 +25,21 @@ const checkUser = (req,res,next) => {
             password
         };
 
-        const idUsuario = authorizationService.checkUser(credenciales);
+    const idUsuario = authorizationServices.verifyAccount(credenciales);
 
-        if(!idUsuario){
-            res.status(401).send(
-                { mensaje: "No autorizado" }
-            );
-        };
+    if(!idUsuario){
+        res.status(401).send(
+            { mensaje: "No autorizado" }
+        );
+    }
 
-        const sessionId = uuid();
-        authorizationServices.addSession(sessionId, idUsuario);
+    const sessionId = uuid();
+    authorizationServices.addSession(sessionId, idUsuario);
 
+    next();
+    }
 
-        next();
-    };
-
-};
+}
 
 module.exports = {
     checkUser
