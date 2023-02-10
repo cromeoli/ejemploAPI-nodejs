@@ -22,7 +22,6 @@ const postOneProduct = (productoFromServices) => {
         }
     )
 
-    console.log("Exito al escribir")
 
     return productoFromServices
 }
