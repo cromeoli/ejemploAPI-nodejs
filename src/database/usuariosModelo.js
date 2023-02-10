@@ -24,9 +24,10 @@ function addSession(id, sessionId){
     sessionsData.sessions.push({ id, sessionId });
 
     fs.writeFile(
+        "./src/database/sessions.json",
         JSON.stringify(sessionsData, null, 2), "utf8",
         (err) =>{
-            throw new Error("Error de escritura (fs)")
+            throw new Error("Error de escritura (fs) - addSessions()")
         }
     )
 

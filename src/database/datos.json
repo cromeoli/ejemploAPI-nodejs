@@ -1,33 +1,73 @@
 {
-    "productos": {
-      "cereales": {
-        "nombre": "Cereales",
-        "precio": 3.45
-      },
-      "colacao": {
-        "nombre": "Colacao",
-        "precio": 1.45
-      },
-      "aguamineral": {
-        "nombre": "Agua mineral",
-        "precio": 1
-      },
-      "prueba": {
-        "nombre": "prueba",
-        "precio": "2",
-        "fecha": "2023-01-22T22:12:48.091Z"
-      },
-      "monster": {
-        "nombre": "monster",
-        "precio": "3",
-        "fecha": "2023-01-22T22:13:45.531Z"
-      },
-      "cubataderonconcocacola": {
-        "nombre": "cubata de ron con coca cola",
-        "precio": 4.5,
-        "id": "e0e27d3b-87b0-489f-b846-be5846717888",
-        "createdAt": "2023-01-23T09:07:26.653Z",
-        "updatedAt": "2023-01-23T09:07:26.653Z"
-      }
+  "productos": {
+    "cereales": {
+      "nombre": "Cereales",
+      "precio": 3.45
+    },
+    "aguamineral": {
+      "nombre": "Agua mineral",
+      "precio": 1
+    },
+    "prueba": {
+      "nombre": "prueba",
+      "precio": "2",
+      "fecha": "2023-01-22T22:12:48.091Z"
+    },
+    "monster": {
+      "nombre": "monster",
+      "precio": "3",
+      "fecha": "2023-01-22T22:13:45.531Z"
+    },
+    "cubataderonconcocacola": {
+      "nombre": "cubata de ron con coca cola",
+      "precio": 4.5,
+      "id": "e0e27d3b-87b0-489f-b846-be5846717888",
+      "createdAt": "2023-01-23T09:07:26.653Z",
+      "updatedAt": "2023-01-23T09:07:26.653Z"
+    },
+    "pacoBebida": {
+      "nombre": "pacoBebida",
+      "precio": "4.25",
+      "categoria": "bebida",
+      "id": "4d04b730-fac2-40fc-a89e-f01810afa2e9"
+    },
+    "redbull": {
+      "nombre": "redbull",
+      "precio": "2.25",
+      "categoria": "bebida",
+      "id": "686ec679-80be-4603-a9f4-db7f402a7418"
+    },
+    "supramidaultra": {
+      "nombre": "supramida ultra",
+      "precio": "2.25",
+      "categoria": "powerup",
+      "id": "59fc4842-5e53-4a29-92b5-a9b42867e88f"
+    },
+    "superalmidon": {
+      "nombre": "super almidon",
+      "precio": "2.25",
+      "categoria": "basura",
+      "id": "f6139715-630e-4062-96e4-f5db45af2433"
+    },
+    "megalodon": {
+      "nombre": "megalodon",
+      "precio": "200000000",
+      "categoria": "comida",
+      "id": "8476bcc6-4a5c-45a5-adad-73d188953e52"
+    },
+    "luo": {
+      "nombre": "luo",
+      "precio": "3",
+      "categoria": "desconocido",
+      "id": "b1fe866b-c56a-46e4-8aca-8dd1ec921144"
+    },
+    "pisluo": {
+      "nombre": "pisluo",
+      "precio": 900,
+      "categoria": "desconocido",
+      "id": "040df8ce-0724-4bfb-820f-b5d256497fab",
+      "fechaAlta": "10/2/2023",
+      "fechaModificacion": "10/2/2023"
     }
   }
+}

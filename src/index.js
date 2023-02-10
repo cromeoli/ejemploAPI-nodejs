@@ -1,14 +1,14 @@
 const express = require("express");
 const auth = require("./utils/authorization");
-//const cookieParser = require("cookie-parser");
+const cookieParser = require("cookie-parser");
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 //Convierte el body a formato json, a un objeto. Middleware de express
 app.use(express.json());
-//app.use(cookieParser());
-app.use(auth.checkUser);
+app.use(cookieParser());
+//app.use(auth.checkUser);
 
 
 const rutasV1 = require("./routes/v1/indexRoutes");

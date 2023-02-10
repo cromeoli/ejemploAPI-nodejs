@@ -3,11 +3,10 @@ const authorizationServices = require("../services/authorizationService")
 
 function checkUser (req, res, next){
 
-
     const { cookies } = req;
     const { email, password } = req.body;
 
-    console.log( email, password)
+    console.log( `Enviando datos de acceso al servidor. Email: ${email} Password: ${password}`);
 
     if(!cookies.sessionId && !email && !password ){
 
@@ -31,9 +30,12 @@ function checkUser (req, res, next){
         res.status(401).send(
             { mensaje: "No autorizado" }
         );
+    }else{
+        console.log( `Usuario verificado, id asignada: ${idUsuario}`);
     }
 
     const sessionId = uuid();
+        console.log( `Sesión añadida, id de session: ${sessionId}`)
     authorizationServices.addSession(sessionId, idUsuario);
 
     next();
